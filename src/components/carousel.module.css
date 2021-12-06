@@ -1,0 +1,125 @@
+.carouselContainer {
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+  position: sticky;
+  box-shadow: 0px 1px 10px black;
+  overflow: hidden;
+}
+
+.carouselContainer:hover .previewImage {
+  transform: translateY(0);
+}
+
+.carouselItem {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.itemContainer {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemText {
+  color: white;
+  text-shadow: 2px 5px 10px black, 2px 5px 10px rgb(42, 110, 165);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  animation: text-bounce 300ms ease-in;
+}
+
+@keyframes text-bounce {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.carouselItem {
+  width: 100vw;
+  height: 100%;
+  background-position: center;
+  object-fit: cover;
+  z-index: 10;
+  animation: zoom 300ms ease-in;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.itemContainer:first-child {
+  display: block;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carouselButton > button {
+  height: 100%;
+  border-radius: 0;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.158);
+  box-shadow: 0px 0px 50px black;
+}
+
+.previewImage {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 200;
+  transform: translateY(100px);
+  transition: transform 100ms ease-in;
+}
+
+.previewImage > img {
+  width: 90px;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0px 1px 15px gray;
+  cursor: pointer;
+}
+
+.previewImage > img:first-child {
+  outline: 1px solid red;
+}
+
+@media only screen and (max-width: 570px) {
+  .previewImage,
+  .itemText {
+    display: none;
+  }
+}

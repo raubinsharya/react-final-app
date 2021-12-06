@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+* {
+  /* outline: 1px solid red; */
+  margin: o;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+*::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+  height: 100%;
+  background-color: gray;
+}
+
+.shadow {
+  box-shadow: 2px 5px 10px black, 2px 5px 10px rgb(42, 110, 165);
+}
+
+.white {
+  color: whitesmoke;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-weight: bolder;
+}
+
+.row {
+  display: flex;
+  row-gap: 10px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
